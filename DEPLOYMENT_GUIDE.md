@@ -546,7 +546,6 @@ mysql -u root -p mophix_studio < database/schema.sql
 ### Technologies to Consider:
 - GraphQL for API (instead of REST)
 - TypeScript for type safety
-- Docker for containerization
 - Kubernetes for orchestration
 - ElasticSearch for advanced search
 - WebSocket for real-time updates

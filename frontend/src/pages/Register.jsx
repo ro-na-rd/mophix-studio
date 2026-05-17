@@ -30,6 +30,7 @@ const Register = () => {
       const payload = {
         email: formData.email,
         password: formData.password,
+        password_confirm: formData.confirm_password,
         first_name: formData.first_name,
         last_name: formData.last_name,
       };

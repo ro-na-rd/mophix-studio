@@ -24,9 +24,21 @@ const Services = () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
-      <div className="mb-8">
-        <h1 className="section-title">Our Services</h1>
-        <p className="section-subtitle">Professional photography packages built for every occasion.</p>
+      <div className="relative overflow-hidden rounded-[2rem] h-[320px] mb-10 shadow-xl">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1400&q=80)',
+          }}
+        />
+        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/10 to-black/50" />
+        <div className="relative z-10 flex h-full flex-col justify-center p-10 text-white">
+          <p className="text-sm uppercase tracking-[0.4em] mb-3">Creative photography</p>
+          <h1 className="text-4xl sm:text-5xl font-semibold mb-4">Our Services</h1>
+          <p className="max-w-2xl text-lg text-gray-100/90">
+            Elegant photography packages crafted for weddings, portraits, events, and brand campaigns.
+          </p>
+        </div>
       </div>
 
       {loading ? (
@@ -34,9 +46,9 @@ const Services = () => {
       ) : services.length > 0 ? (
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {services.map((service) => (
-            <article key={service.service_id} className="card p-6">
+            <article key={service.service_id} className="card p-6 bg-white/90 shadow-lg">
               <h2 className="text-2xl font-semibold mb-2">{service.name}</h2>
-              <p className="text-gray-600 mb-4">{service.description || 'A premium photography package.'}</p>
+              <p className="text-gray-600 mb-4">{service.description || 'A premium photography package designed for your story.'}</p>
               <p className="text-lg font-semibold text-primary mb-4">RWF {service.price?.toFixed(0) || 'Contact'}</p>
               <Link to={`/services/${service.service_id}`} className="btn-outline">View details</Link>
             </article>

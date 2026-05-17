@@ -35,10 +35,25 @@ const Contact = () => {
 
   return (
     <section className="container mx-auto px-4 py-12">
+      <div className="relative overflow-hidden rounded-[2rem] h-[300px] mb-10 shadow-xl">
+        <div
+          className="absolute inset-0 bg-cover bg-center"
+          style={{
+            backgroundImage: 'url(https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=1400&q=80)',
+          }}
+        />
+        <div className="absolute inset-0 bg-black/40" />
+        <div className="relative z-10 flex h-full flex-col justify-center p-10 text-white">
+          <p className="text-sm uppercase tracking-[0.4em] mb-3">Get in touch</p>
+          <h1 className="text-4xl sm:text-5xl font-semibold mb-4">Contact</h1>
+          <p className="max-w-2xl text-lg text-gray-100/90">
+            Send a message to Mophix Studio and let us help you plan your next photo session.
+          </p>
+        </div>
+      </div>
+
       <div className="grid gap-10 lg:grid-cols-[1.1fr_0.9fr]">
         <div>
-          <h1 className="section-title">Contact Us</h1>
-          <p className="section-subtitle">Send a message to Mophix Studio and we will respond shortly.</p>
           <form className="space-y-6" onSubmit={handleSubmit}>
             <div className="grid gap-6 md:grid-cols-2">
               <input

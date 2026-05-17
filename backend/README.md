@@ -216,20 +216,13 @@ npm run test:watch
 
 ## Deployment
 
-### Docker (Recommended)
-
-```bash
-docker build -t mophix-api .
-docker run -p 5000:5000 --env-file .env mophix-api
-```
-
 ### Traditional Hosting
 
 1. Install Node.js and PM2
 2. Configure environment variables
 3. Install dependencies: `npm install`
-4. Build production: `npm run build`
-5. Start with PM2: `pm2 start server.js`
+4. Start the server: `npm start`
+5. Use PM2 or another process manager for production
 
 ### Cloud Platforms
 
